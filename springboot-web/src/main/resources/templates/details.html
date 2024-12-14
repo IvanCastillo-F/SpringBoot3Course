@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title th:text="${title}">Hello World</title>
+</head>
+<body>
+    <h1 th:text="${title}"></h1>
+    <ul>
+        <li th:text="${user.name}"></li>
+        <li th:text="${user.lastname}"></li>
+        <li th:if="${user.email}" th:text="${user.email}"></li>
+        <li th:if="${not(user.email != null)}" th:text="${'No Email'}"></li>
+    </ul>
+    <a th:href="@{/list}">See List</a><br>
+    <!-- How pass a variable paramethers wiht thymeleaf example: -->
+    <a th:href="@{'/api/params/foo?message='+ ${title} }">See Message</a><br>
+    <!-- How pass a String paramethers wiht thymeleaf example: -->
+    <a th:href="@{/api/params/foo(message='Hello there!!') }">See Message 2</a><br>
+    <!-- How pass a Multiple paramethers wiht thymeleaf example: -->
+    <a th:href="@{/api/params/bar(text='Hello there!!', code=212121)}">See Message 3</a><br>
+    <!-- How pass a path variable wiht thymeleaf example: -->
+    <a th:href="@{/api/var/baz/Hello there!!}">See Message 4</a>
+</body>
+</html>
