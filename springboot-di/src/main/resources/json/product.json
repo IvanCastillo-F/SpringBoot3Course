@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "name": "Playstation 5",
+        "price": 1000
+    },
+    {
+        "id": 2,
+        "name": "Xbox one",
+        "price": 1062
+    },
+    {
+        "id": 3,
+        "name": "Nintendo Controller",
+        "price": 300
+    },
+    {
+        "id": 4,
+        "name": "Laptop Gaming",
+        "price": 1802
+    }
+]
